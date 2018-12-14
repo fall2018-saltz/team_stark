@@ -93,5 +93,6 @@ dg<- dat%>% group_by(d.Type.of.Travel,d.Satisfaction_b)
 ds<-summarise(dg,tot= n())
 str(ds)
 g<-ggplot(ds, aes(x= d.Type.of.Travel,y= tot ,fill= d.Satisfaction_b)) + geom_col( color="blue",stat = "identity") + theme(axis.text.x = element_text(angle = 45, hjust=1))
+str(slices)
 g<- g + labs(x= "Travel type", y="Number Of Customers") + ggtitle("Customer Count for Different Travel type") + scale_fill_discrete(name="Satisfaction Level")
 g
