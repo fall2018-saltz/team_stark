@@ -96,4 +96,4 @@ g<-ggplot(ds, aes(x= d.Type.of.Travel,y= tot ,fill= d.Satisfaction_b)) + geom_co
 str(slices)
 g<- g + labs(x= "Travel type", y="Number Of Customers") + ggtitle("Customer Count for Different Travel type") + scale_fill_discrete(name="Satisfaction Level")
 str(slices)
-g
+#g
