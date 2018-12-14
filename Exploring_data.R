@@ -91,7 +91,7 @@ library(ggplot2)
 dat<- data.frame(d$Satisfaction_b, d$Type.of.Travel)
 dg<- dat%>% group_by(d.Type.of.Travel,d.Satisfaction_b)
 ds<-summarise(dg,tot= n())
-str(ds)
+
 ds$d.Type.of.Travel <- as.integer(ds$d.Type.of.Travel)
 str(slices)
 g<-ggplot(ds, aes(x= d.Type.of.Travel,y= tot ,fill= d.Satisfaction_b)) + 
